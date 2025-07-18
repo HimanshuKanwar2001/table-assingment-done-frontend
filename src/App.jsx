@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Filters from "./components/Filters";
 import ProductTable from "./components/ProductTable";
-import { Atom } from "react-loading-indicators"; 
+import { Atom } from "react-loading-indicators";
+import { data } from "./data/data";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -11,7 +12,7 @@ const App = () => {
     price: "All",
     status: "All",
   });
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://api.udhhyog.com/v1/test")
@@ -19,12 +20,15 @@ const App = () => {
       .then((data) => {
         setProducts(data);
         setFiltered(data);
-        setLoading(false); 
+        setLoading(false);
       })
       .catch((err) => {
         console.error("API Error:", err);
-        setLoading(false); 
+        setLoading(false);
       });
+    // setProducts(data);
+    // setFiltered(data);
+    // setLoading(false);
   }, []);
 
   useEffect(() => {

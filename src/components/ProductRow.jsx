@@ -6,12 +6,12 @@ const ProductRow = ({ product, isSelected, onToggleSelect }) => {
   return (
     <tr
       onClick={onToggleSelect}
-      className={`transition duration-200  rounded-l-lg   m-5 ${
+      className={`transition duration-200  rounded-lg   m-5 ${
         isSelected ? "bg-yellow-200" : "hover:bg-amber-100 "
       }`}
     >
       {/* Checkbox */}
-      <td className="px-4 py-4">
+      <td className="px-4 py-4 rounded-l-2xl ">
         <input
           type="checkbox"
           checked={isSelected}
@@ -43,7 +43,7 @@ const ProductRow = ({ product, isSelected, onToggleSelect }) => {
       </td>
 
       {/* Status */}
-      <td className="px-4 py-4">
+      <td className="px-4 py-4 rounded-r-2xl">
         <span
           className={`inline-block px-3  py-2 text-xs font-bold rounded-full ${
             status === "Active"

@@ -14,15 +14,15 @@ const ProductTable = ({ data }) => {
     });
   };
   return (
-    <div className="w-full overflow-x-auto rounded-2xl shadow bg-white ">
+    <div className="w-full overflow-x-auto rounded-2xl p-6 shadow bg-white ">
       <table className="min-w-[800px] w-full table-auto text-sm">
-        <thead className="bg-gray-100 text-left">
+        <thead className="bg-gray-100 text-left ">
           <tr>
-            <th className="p-3 whitespace-nowrap">ID</th>
-            <th className="p-3 whitespace-nowrap">Name</th>
-            <th className="p-3 whitespace-nowrap">Category</th>
-            <th className="p-3 whitespace-nowrap">Price</th>
-            <th className="p-3 whitespace-nowrap">Status</th>
+            <th className="p-5 whitespace-nowrap rounded-l-2xl ">ID</th>
+            <th className="p-5 whitespace-nowrap">Name</th>
+            <th className="p-5 whitespace-nowrap">Category</th>
+            <th className="p-5 whitespace-nowrap">Price</th>
+            <th className="p-5 whitespace-nowrap rounded-r-2xl">Status</th>
           </tr>
         </thead>
         <tbody>
