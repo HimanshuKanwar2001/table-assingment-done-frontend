@@ -13,15 +13,15 @@ const App = () => {
   });
 
   useEffect(() => {
-    // fetch("https://api.udhhyog.com/v1/test")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setProducts(data);
-    //     setFiltered(data);
-    //   })
-    //   .catch((err) => console.error("API Error:", err));
-    setProducts(data);
-    setFiltered(data);
+    fetch("https://api.udhhyog.com/v1/test")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setFiltered(data);
+      })
+      .catch((err) => console.error("API Error:", err));
+    // setProducts(data);
+    // setFiltered(data);
   }, []);
 
   useEffect(() => {
