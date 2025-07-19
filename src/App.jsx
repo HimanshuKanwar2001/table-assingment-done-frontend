@@ -15,7 +15,9 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://api.udhhyog.com/v1/test")
+    fetch("https://api.udhhyog.com/v1/test", {
+      method: "POST",
+    })
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
